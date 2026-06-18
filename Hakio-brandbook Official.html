@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hakio — Brandbook v1.0</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --noir:#0B0B0C;--graphite:#1A1A1C;--olive:#4A4F3A;
+  --stone:#7A796F;--mist:#C8C4BC;--cream:#EAE6DE;--ivory:#F1EFE9;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Inter",Arial,sans-serif;
+}
+html{font-size:16px;scroll-behavior:smooth}
+body{background:#2A2826;display:flex;flex-direction:column;align-items:center;gap:4px;padding:20px 0}
+
+/* Each page is A4 portrait */
+.page{
+  width:210mm;min-height:297mm;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+  flex-shrink:0;
+}
+.page.dark{background:var(--noir);color:var(--ivory)}
+.page.light{background:var(--ivory);color:var(--noir)}
+.page.olive-bg{background:var(--olive);color:var(--ivory)}
+.page.graphite-bg{background:var(--graphite);color:var(--ivory)}
+
+/* Typography */
+.serif{font-family:var(--serif)}
+.sans{font-family:var(--sans)}
+h1.display{font-family:var(--serif);font-weight:300;letter-spacing:0.12em;line-height:1.05}
+.micro{font-family:var(--sans);font-size:9.5px;letter-spacing:0.25em;text-transform:uppercase;color:var(--stone)}
+.micro.light-txt{color:var(--mist)}
+
+/* Page number */
+.pg-num{
+  position:absolute;bottom:12mm;right:14mm;
+  font-family:var(--sans);font-size:11px;letter-spacing:0.2em;color:var(--stone);
+}
+
+/* Logo SVG inline helper */
+.logo-h-dark svg, .logo-h-light svg{display:block}
+
+@media print{
+  body{background:none;padding:0;gap:0}
+  .page{page-break-after:always;width:210mm;height:297mm;min-height:unset}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════ PAGE 1: COVER -->
+<div class="page dark" style="justify-content:space-between;padding:16mm 14mm 12mm">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <p class="micro light-txt" style="letter-spacing:0.3em">HAKIO</p>
+    <p class="micro light-txt">BRANDBOOK — V1.0</p>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:10mm;flex:1;justify-content:center">
+    <!-- Logo symbol + wordmark vertical -->
+    <svg width="90" height="90" viewBox="0 0 60 60" fill="none">
+      <rect x="0" y="0" width="60" height="60" fill="#4A4F3A"/>
+      <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4.0" stroke-linecap="square"/>
+      <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4.0" stroke-linecap="square"/>
+      <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+    </svg>
+    <div style="height:0.5px;width:40mm;background:#4A4F3A"></div>
+    <p style="font-family:var(--serif);font-weight:400;font-size:36px;letter-spacing:0.52em;color:#F1EFE9;padding-left:0.52em">HAKIO</p>
+    <p class="micro light-txt" style="margin-top:2mm">MARKETING STUDIO</p>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end">
+    <p class="micro light-txt">IDENTIDAD VISUAL — NORMAS DE MARCA</p>
+    <p class="micro light-txt" style="color:#4A4F3A">negativa × diagonal</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ PAGE 2: ÍNDICE -->
+<div class="page dark" style="padding:16mm 14mm 12mm">
+  <p class="micro light-txt" style="margin-bottom:14mm">CONTENIDO</p>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0">
+    <style>
+      .toc-item{display:flex;justify-content:space-between;align-items:baseline;padding:5mm 0;border-bottom:0.5px solid #1E1C1A}
+      .toc-label{font-family:var(--serif);font-weight:300;font-size:20px;letter-spacing:0.06em;color:#F1EFE9}
+      .toc-sub{font-family:var(--sans);font-size:10px;letter-spacing:0.15em;color:#4A4744;margin-top:1mm}
+      .toc-num{font-family:var(--sans);font-size:10px;letter-spacing:0.1em;color:#4A4F3A}
+    </style>
+    <div class="toc-item"><div><div class="toc-label">Filosofía de marca</div><div class="toc-sub">POSICIONAMIENTO — VOZ — VALORES</div></div><span class="toc-num">03</span></div>
+    <div class="toc-item"><div><div class="toc-label">El símbolo</div><div class="toc-sub">ANATOMÍA — CONSTRUCCIÓN — CONCEPTO</div></div><span class="toc-num">04</span></div>
+    <div class="toc-item"><div><div class="toc-label">Sistema de logo</div><div class="toc-sub">VARIANTES — COMPOSICIONES</div></div><span class="toc-num">05</span></div>
+    <div class="toc-item"><div><div class="toc-label">Espacio y tamaños</div><div class="toc-sub">ZONA DE RESPETO — MÍNIMOS</div></div><span class="toc-num">07</span></div>
+    <div class="toc-item"><div><div class="toc-label">Paleta cromática</div><div class="toc-sub">7 TONOS — CÓDIGOS HEX · RGB · CMYK</div></div><span class="toc-num">08</span></div>
+    <div class="toc-item"><div><div class="toc-label">Tipografía</div><div class="toc-sub">PRIMARIA — SECUNDARIA — JERARQUÍA</div></div><span class="toc-num">09</span></div>
+    <div class="toc-item"><div><div class="toc-label">Usos correctos e incorrectos</div><div class="toc-sub">DO'S AND DON'TS</div></div><span class="toc-num">11</span></div>
+    <div class="toc-item"><div><div class="toc-label">Aplicaciones</div><div class="toc-sub">DIGITAL — FÍSICO</div></div><span class="toc-num">13</span></div>
+  </div>
+  <p class="pg-num">02</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ PAGE 3: FILOSOFÍA -->
+<div class="page light" style="padding:16mm 14mm 12mm;justify-content:space-between">
+  <div>
+    <p class="micro" style="color:#7A796F;margin-bottom:3mm">01 — FILOSOFÍA DE MARCA</p>
+    <div style="height:0.5px;background:#C8C4BC;margin-bottom:10mm"></div>
+    <h1 class="display" style="font-size:42px;color:#0B0B0C;max-width:130mm;margin-bottom:10mm">La marca que no necesita gritar para ser escuchada.</h1>
+    <p style="font-family:var(--sans);font-size:11px;line-height:1.8;color:#3A3835;max-width:120mm;margin-bottom:8mm">
+      Hakio es un Marketing Studio de alto nivel especializada en transformar marcas en presencias inevitables. Trabajamos en la intersección del diseño de excelencia, la estrategia precisa y la comunicación que respeta la inteligencia de quien la recibe.
+    </p>
+    <p style="font-family:var(--sans);font-size:11px;line-height:1.8;color:#3A3835;max-width:120mm">
+      No creemos en el ruido. Creemos en la claridad. Cada decisión visual, cada palabra, cada silencio tiene intención.
+    </p>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6mm;margin-top:10mm">
+    <div style="border-top:1px solid #4A4F3A;padding-top:5mm">
+      <p style="font-family:var(--serif);font-size:16px;font-weight:400;color:#0B0B0C;margin-bottom:2mm">Claridad</p>
+      <p style="font-family:var(--sans);font-size:11px;line-height:1.6;color:#7A796F">sobre caos. Eliminamos lo que no aporta. Lo que queda, es inevitable.</p>
+    </div>
+    <div style="border-top:1px solid #4A4F3A;padding-top:5mm">
+      <p style="font-family:var(--serif);font-size:16px;font-weight:400;color:#0B0B0C;margin-bottom:2mm">Precisión</p>
+      <p style="font-family:var(--sans);font-size:11px;line-height:1.6;color:#7A796F">sobre abundancia. Cada elemento justifica su existencia o no existe.</p>
+    </div>
+    <div style="border-top:1px solid #4A4F3A;padding-top:5mm">
+      <p style="font-family:var(--serif);font-size:16px;font-weight:400;color:#0B0B0C;margin-bottom:2mm">Presencia</p>
+      <p style="font-family:var(--sans);font-size:11px;line-height:1.6;color:#7A796F">sobre volumen. Una marca fuerte no ocupa espacio: lo define.</p>
+    </div>
+  </div>
+  <div style="margin-top:10mm;padding:6mm 8mm;background:#0B0B0C">
+    <p style="font-family:var(--serif);font-size:18px;font-weight:300;font-style:italic;color:#F1EFE9;letter-spacing:0.04em">"La agencia que trabaja en la sombra para poner a sus clientes en la luz."</p>
+  </div>
+  <p class="pg-num" style="color:#C8C4BC">03</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ PAGE 4: ANATOMÍA DEL SÍMBOLO -->
+<div class="page dark" style="padding:16mm 14mm 12mm">
+  <p class="micro light-txt" style="margin-bottom:3mm">02 — EL SÍMBOLO</p>
+  <div style="height:0.5px;background:#1E1C1A;margin-bottom:10mm"></div>
+  <div style="display:flex;gap:12mm;flex:1">
+    <!-- Left: large symbol with annotations -->
+    <div style="flex:1;display:flex;align-items:center;justify-content:center">
+      <div style="position:relative;width:150px;height:150px">
+        <!-- Main symbol -->
+        <svg width="150" height="150" viewBox="0 0 60 60" fill="none">
+          <rect x="0" y="0" width="60" height="60" fill="#4A4F3A"/>
+          <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4.0" stroke-linecap="square"/>
+          <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4.0" stroke-linecap="square"/>
+          <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+          <!-- Golden ratio marker -->
+          <line x1="0" y1="23" x2="60" y2="23" stroke="#F1EFE9" stroke-width="0.3" stroke-dasharray="2,2" opacity="0.4"/>
+        </svg>
+        <!-- Annotation: golden ratio -->
+        <div style="position:absolute;right:-60px;top:55px;text-align:left">
+          <p style="font-family:var(--sans);font-size:7px;color:#4A4F3A;letter-spacing:0.1em">PUNTO ÁUREO</p>
+          <p style="font-family:var(--sans);font-size:7px;color:#5A5855">38.2% desde el tope</p>
+        </div>
+      </div>
+    </div>
+    <!-- Right: concept breakdown -->
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:8mm">
+      <div>
+        <p class="micro light-txt" style="margin-bottom:3mm">CONCEPTO</p>
+        <p style="font-family:var(--serif);font-weight:300;font-size:22px;color:#F1EFE9;letter-spacing:0.06em;margin-bottom:3mm">Negativa × Diagonal</p>
+        <p style="font-family:var(--sans);font-size:11px;line-height:1.7;color:#7A796F">El bloque de color es la forma. La H no se dibuja: se talla. Aparece como vacío dentro del sólido — presencia definida por ausencia.</p>
+      </div>
+      <div style="height:0.5px;background:#1E1C1A"></div>
+      <div style="display:flex;flex-direction:column;gap:5mm">
+        <div>
+          <p style="font-family:var(--sans);font-size:9.5px;letter-spacing:0.2em;color:#4A4F3A;margin-bottom:1mm">BLOQUE</p>
+          <p style="font-family:var(--sans);font-size:11px;color:#5A5855;line-height:1.5">Cuadrado de Deep Olive #4A4F3A. La forma primaria. Independiente. Reconocible como bloque de color antes de leerse como letra.</p>
+        </div>
+        <div>
+          <p style="font-family:var(--sans);font-size:9.5px;letter-spacing:0.2em;color:#4A4F3A;margin-bottom:1mm">EL VACÍO — H</p>
+          <p style="font-family:var(--sans);font-size:11px;color:#5A5855;line-height:1.5">Dos brazos verticales simétricos. El travesaño diagonal asciende de izquierda a derecha, creando tensión y movimiento dentro de la forma estática.</p>
+        </div>
+        <div>
+          <p style="font-family:var(--sans);font-size:9.5px;letter-spacing:0.2em;color:#4A4F3A;margin-bottom:1mm">PROPORCIÓN ÁUREA</p>
+          <p style="font-family:var(--sans);font-size:11px;color:#5A5855;line-height:1.5">El eje central del travesaño pasa exactamente por el punto de proporción áurea (38.2% desde el tope). Decisión geométrica, no arbitraria.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="pg-num">04</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ PAGE 5: SISTEMA DE LOGO 1 -->
+<div class="page dark" style="padding:16mm 14mm 12mm">
+  <p class="micro light-txt" style="margin-bottom:3mm">03 — SISTEMA DE LOGO</p>
+  <div style="height:0.5px;background:#1E1C1A;margin-bottom:8mm"></div>
+  <!-- Horizontal dark -->
+  <div style="background:#0B0B0C;border:0.5px solid #1A1A1C;padding:10mm 12mm;margin-bottom:4mm">
+    <p class="micro light-txt" style="margin-bottom:7mm">VERSIÓN PRINCIPAL — HORIZONTAL OSCURA</p>
+    <div style="display:flex;align-items:center;gap:6mm">
+      <svg width="56" height="56" viewBox="0 0 60 60" fill="none">
+        <rect x="0" y="0" width="60" height="60" fill="#4A4F3A"/>
+        <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4.0" stroke-linecap="square"/>
+        <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4.0" stroke-linecap="square"/>
+        <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+      </svg>
+      <div style="width:0.5px;height:40px;background:#4A4F3A"></div>
+      <span style="font-family:var(--serif);font-weight:400;font-size:34px;letter-spacing:0.52em;color:#F1EFE9;padding-left:0.52em;line-height:1">HAKIO</span>
+    </div>
+  </div>
+  <!-- Horizontal light -->
+  <div style="background:#F1EFE9;border:0.5px solid #DDD9D3;padding:10mm 12mm">
+    <p class="micro" style="margin-bottom:7mm;color:#AEAAA3">VERSIÓN HORIZONTAL CLARA</p>
+    <div style="display:flex;align-items:center;gap:6mm">
+      <svg width="56" height="56" viewBox="0 0 60 60" fill="none">
+        <rect x="0" y="0" width="60" height="60" fill="#4A4F3A"/>
+        <line x1="17" y1="12" x2="17" y2="48" stroke="#F1EFE9" stroke-width="4.0" stroke-linecap="square"/>
+        <line x1="43" y1="12" x2="43" y2="48" stroke="#F1EFE9" stroke-width="4.0" stroke-linecap="square"/>
+        <line x1="17" y1="32" x2="43" y2="20" stroke="#F1EFE9" stroke-width="3.4" stroke-linecap="butt"/>
+      </svg>
+      <div style="width:0.5px;height:40px;background:#C8C4BC"></div>
+      <span style="font-family:var(--serif);font-weight:400;font-size:34px;letter-spacing:0.52em;color:#1A1A1C;padding-left:0.52em;line-height:1">HAKIO</span>
+    </div>
+  </div>
+  <p class="pg-num">05</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ PAGE 6: SISTEMA DE LOGO 2 -->
+<div class="page dark" style="padding:16mm 14mm 12mm">
+  <p class="micro light-txt" style="margin-bottom:3mm">03 — SISTEMA DE LOGO</p>
+  <div style="height:0.5px;background:#1E1C1A;margin-bottom:8mm"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4mm;flex:1">
+    <!-- Vertical dark -->
+    <div style="background:#0B0B0C;border:0.5px solid #1A1A1C;padding:8mm;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5mm">
+      <p class="micro light-txt" style="align-self:flex-start;margin-bottom:4mm">VERTICAL — OSCURA</p>
+      <svg width="70" height="70" viewBox="0 0 60 60" fill="none">
+        <rect x="0" y="0" width="60" height="60" fill="#4A4F3A"/>
+        <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4.0" stroke-linecap="square"/>
+        <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4.0" stroke-linecap="square"/>
+        <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+      </svg>
+      <span style="font-family:var(--serif);font-weight:400;font-size:14px;letter-spacing:0.48em;color:#F1EFE9;padding-left:0.48em">HAKIO</span>
+    </div>
+    <!-- Vertical light -->
+    <div style="background:#F1EFE9;border:0.5px solid #DDD9D3;padding:8mm;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5mm">
+      <p class="micro" style="align-self:flex-start;margin-bottom:4mm;color:#AEAAA3">VERTICAL — CLARA</p>
+      <svg width="70" height="70" viewBox="0 0 60 60" fill="none">
+        <rect x="0" y="0" width="60" height="60" fill="#4A4F3A"/>
+        <line x1="17" y1="12" x2="17" y2="48" stroke="#F1EFE9" stroke-width="4.0" stroke-linecap="square"/>
+        <line x1="43" y1="12" x2="43" y2="48" stroke="#F1EFE9" stroke-width="4.0" stroke-linecap="square"/>
+        <line x1="17" y1="32" x2="43" y2="20" stroke="#F1EFE9" stroke-width="3.4" stroke-linecap="butt"/>
+      </svg>
+      <span style="font-family:var(--serif);font-weight:400;font-size:14px;letter-spacing:0.48em;color:#1A1A1C;padding-left:0.48em">HAKIO</span>
+    </div>
+    <!-- Symbol only -->
+    <div style="background:#0B0B0C;border:0.5px solid #1A1A1C;padding:8mm;display:flex;flex-direction:column;align-items:center;justify-content:center">
+      <p class="micro light-txt" style="align-self:flex-start;margin-bottom:4mm">SÍMBOLO</p>
+      <svg width="90" height="90" viewBox="0 0 60 60" fill="none">
+        <rect x="0" y="0" width="60" height="60" fill="#4A4F3A"/>
+        <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4.0" stroke-linecap="square"/>
+        <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4.0" stroke-linecap="square"/>
+        <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+      </svg>
+      <p style="font-family:var(--sans);font-size:7px;letter-spacing:0.1em;color:#3A3835;margin-top:4mm">USO COMO ÍCONO O AVATAR</p>
+    </div>
+  </div>
+  <p class="pg-num">06</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ PAGE 7: ESPACIO Y TAMAÑOS -->
+<div class="page light" style="padding:16mm 14mm 12mm;justify-content:space-between">
+  <div>
+    <p class="micro" style="color:#7A796F;margin-bottom:3mm">04 — ESPACIO Y TAMAÑOS</p>
+    <div style="height:0.5px;background:#C8C4BC;margin-bottom:10mm"></div>
+  </div>
+  <!-- Clear space diagram -->
+  <div style="flex:1;display:flex;gap:12mm">
+    <div style="flex:1">
+      <p style="font-family:var(--sans);font-size:11px;letter-spacing:0.15em;color:#4A4F3A;margin-bottom:4mm">ZONA DE RESPETO</p>
+      <p style="font-family:var(--sans);font-size:11px;line-height:1.7;color:#5A5855;margin-bottom:6mm">El logo debe mantener siempre un espacio libre equivalente a la altura del símbolo (X) en todos sus lados. Ningún otro elemento visual puede invadir esa zona.</p>
+      <!-- Clear space diagram -->
+      <div style="display:flex;justify-content:center;align-items:center;padding:10mm;border:0.5px dashed #C8C4BC;margin-bottom:4mm;position:relative">
+        <div style="border:1px dashed #4A4F3A;padding:8mm">
+          <div style="display:flex;align-items:center;gap:4mm">
+            <svg width="40" height="40" viewBox="0 0 60 60" fill="none">
+              <rect x="0" y="0" width="60" height="60" fill="#4A4F3A"/>
+              <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4.0" stroke-linecap="square"/>
+              <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4.0" stroke-linecap="square"/>
+              <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+            </svg>
+            <span style="font-family:var(--serif);font-weight:400;font-size:20px;letter-spacing:0.48em;color:#1A1A1C;padding-left:0.48em">HAKIO</span>
+          </div>
+        </div>
+        <p style="position:absolute;top:2mm;left:50%;transform:translateX(-50%);font-family:var(--sans);font-size:7px;color:#4A4F3A;letter-spacing:0.15em">X</p>
+        <p style="position:absolute;bottom:2mm;left:50%;transform:translateX(-50%);font-family:var(--sans);font-size:7px;color:#4A4F3A;letter-spacing:0.15em">X</p>
+      </div>
+      <p style="font-family:var(--sans);font-size:9.5px;color:#9A9895;font-style:italic">X = altura del bloque símbolo</p>
+    </div>
+    <div style="flex:1">
+      <p style="font-family:var(--sans);font-size:11px;letter-spacing:0.15em;color:#4A4F3A;margin-bottom:4mm">TAMAÑOS MÍNIMOS</p>
+      <div style="display:flex;flex-direction:column;gap:4mm">
+        <div style="border-top:1px solid #EAE6DE;padding-top:4mm">
+          <p style="font-family:var(--sans);font-size:9.5px;letter-spacing:0.15em;color:#7A796F;margin-bottom:2mm">IMPRESIÓN</p>
+          <div style="display:flex;justify-content:space-between;margin-bottom:2mm">
+            <p style="font-family:var(--sans);font-size:11px;color:#1A1A1C">Logo horizontal completo</p>
+            <p style="font-family:var(--sans);font-size:11px;color:#4A4F3A;font-weight:500">35mm</p>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:2mm">
+            <p style="font-family:var(--sans);font-size:11px;color:#1A1A1C">Logo vertical</p>
+            <p style="font-family:var(--sans);font-size:11px;color:#4A4F3A;font-weight:500">20mm</p>
+          </div>
+          <div style="display:flex;justify-content:space-between">
+            <p style="font-family:var(--sans);font-size:11px;color:#1A1A1C">Símbolo solo</p>
+            <p style="font-family:var(--sans);font-size:11px;color:#4A4F3A;font-weight:500">8mm</p>
+          </div>
+        </div>
+        <div style="border-top:1px solid #EAE6DE;padding-top:4mm">
+          <p style="font-family:var(--sans);font-size:9.5px;letter-spacing:0.15em;color:#7A796F;margin-bottom:2mm">DIGITAL</p>
+          <div style="display:flex;justify-content:space-between;margin-bottom:2mm">
+            <p style="font-family:var(--sans);font-size:11px;color:#1A1A1C">Logo horizontal completo</p>
+            <p style="font-family:var(--sans);font-size:11px;color:#4A4F3A;font-weight:500">200px</p>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:2mm">
+            <p style="font-family:var(--sans);font-size:11px;color:#1A1A1C">Logo vertical</p>
+            <p style="font-family:var(--sans);font-size:11px;color:#4A4F3A;font-weight:500">120px</p>
+          </div>
+          <div style="display:flex;justify-content:space-between">
+            <p style="font-family:var(--sans);font-size:11px;color:#1A1A1C">Símbolo solo (avatar/favicon)</p>
+            <p style="font-family:var(--sans);font-size:11px;color:#4A4F3A;font-weight:500">32px</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="pg-num" style="color:#C8C4BC">07</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ PAGE 8: PALETA CROMÁTICA -->
+<div class="page dark" style="padding:16mm 14mm 12mm">
+  <p class="micro light-txt" style="margin-bottom:3mm">05 — PALETA CROMÁTICA</p>
+  <div style="height:0.5px;background:#1E1C1A;margin-bottom:8mm"></div>
+  <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:3mm;flex:1;align-items:start">
+    <style>
+      .swatch{display:flex;flex-direction:column;gap:3mm}
+      .swatch-block{width:100%;aspect-ratio:1;border-radius:2px}
+      .swatch-name{font-family:var(--sans);font-size:7px;letter-spacing:0.15em;color:#4A4744}
+      .swatch-hex{font-family:var(--sans);font-size:7px;color:#3A3835;margin-top:1mm}
+      .swatch-rgb{font-family:var(--sans);font-size:6px;color:#2A2826;margin-top:0.5mm}
+      .swatch-cmyk{font-family:var(--sans);font-size:6px;color:#2A2826}
+    </style>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#0B0B0C;border:0.5px solid #1E1C1A"></div>
+      <div>
+        <p class="swatch-name">JET BLACK</p>
+        <p class="swatch-hex">#0B0B0C</p>
+        <p class="swatch-rgb">RGB 11 11 12</p>
+        <p class="swatch-cmyk">CMYK 0 0 0 95</p>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#1A1A1C;border:0.5px solid #2C2A2E"></div>
+      <div>
+        <p class="swatch-name">GRAPHITE</p>
+        <p class="swatch-hex">#1A1A1C</p>
+        <p class="swatch-rgb">RGB 26 26 28</p>
+        <p class="swatch-cmyk">CMYK 0 0 0 89</p>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#4A4F3A"></div>
+      <div>
+        <p class="swatch-name" style="color:#4A4F3A">DEEP OLIVE</p>
+        <p class="swatch-hex">#4A4F3A</p>
+        <p class="swatch-rgb">RGB 74 79 58</p>
+        <p class="swatch-cmyk">CMYK 6 0 27 69</p>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#7A796F"></div>
+      <div>
+        <p class="swatch-name">WARM STONE</p>
+        <p class="swatch-hex">#7A796F</p>
+        <p class="swatch-rgb">RGB 122 121 111</p>
+        <p class="swatch-cmyk">CMYK 0 1 9 52</p>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#C8C4BC"></div>
+      <div>
+        <p class="swatch-name">MIST</p>
+        <p class="swatch-hex">#C8C4BC</p>
+        <p class="swatch-rgb">RGB 200 196 188</p>
+        <p class="swatch-cmyk">CMYK 0 2 6 22</p>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#EAE6DE"></div>
+      <div>
+        <p class="swatch-name">CREAM</p>
+        <p class="swatch-hex">#EAE6DE</p>
+        <p class="swatch-rgb">RGB 234 230 222</p>
+        <p class="swatch-cmyk">CMYK 0 2 5 8</p>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-block" style="background:#F1EFE9;border:0.5px solid #DDD9D3"></div>
+      <div>
+        <p class="swatch-name">IVORY</p>
+        <p class="swatch-hex">#F1EFE9</p>
+        <p class="swatch-rgb">RGB 241 239 233</p>
+        <p class="swatch-cmyk">CMYK 0 1 3 5</p>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:8mm;padding:5mm 6mm;background:#111110">
+    <p style="font-family:var(--sans);font-size:9.5px;line-height:1.6;color:#5A5855">
+      <span style="color:#4A4F3A;letter-spacing:0.1em">USO DEL COLOR —</span> Jet Black y Graphite son los fondos primarios. Deep Olive es el único acento de color: reservado para el símbolo y highlights puntuales. Warm Stone y Mist funcionan como neutros intermedios en textos secundarios y divisores. Cream e Ivory son los fondos claros y el color del wordmark en versión dark.
+    </p>
+  </div>
+  <p class="pg-num">08</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ PAGE 9: TIPOGRAFÍA PRIMARIA -->
+<div class="page light" style="padding:16mm 14mm 12mm">
+  <div>
+    <p class="micro" style="color:#7A796F;margin-bottom:3mm">06 — TIPOGRAFÍA PRIMARIA</p>
+    <div style="height:0.5px;background:#C8C4BC;margin-bottom:8mm"></div>
+  </div>
+  <div style="flex:1">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8mm">
+      <div>
+        <p style="font-family:var(--serif);font-size:42px;font-weight:400;letter-spacing:0.06em;color:#0B0B0C;line-height:1">Cormorant</p>
+        <p style="font-family:var(--serif);font-size:42px;font-weight:300;font-style:italic;letter-spacing:0.06em;color:#0B0B0C;line-height:1">Garamond</p>
+      </div>
+      <div style="text-align:right">
+        <p style="font-family:var(--sans);font-size:9.5px;letter-spacing:0.2em;color:#7A796F">GOOGLE FONTS</p>
+        <p style="font-family:var(--sans);font-size:9.5px;color:#9A9895;margin-top:1mm">fonts.google.com</p>
+        <p style="font-family:var(--sans);font-size:9.5px;color:#4A4F3A;letter-spacing:0.1em;margin-top:2mm">Regular 400 — Principal</p>
+      </div>
+    </div>
+    <!-- Alphabet display -->
+    <div style="background:#0B0B0C;padding:6mm 8mm;margin-bottom:6mm">
+      <p style="font-family:var(--serif);font-weight:400;font-size:22px;letter-spacing:0.08em;color:#F1EFE9;line-height:1.6">
+        A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z
+      </p>
+      <p style="font-family:var(--serif);font-weight:400;font-size:22px;letter-spacing:0.08em;color:#7A796F;line-height:1.6">
+        a b c d e f g h i j k l m n ñ o p q r s t u v w x y z
+      </p>
+    </div>
+    <!-- Usage hierarchy -->
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:3mm 8mm;align-items:baseline">
+      <p style="font-family:var(--sans);font-size:7px;letter-spacing:0.15em;color:#7A796F">DISPLAY / TITULARES</p>
+      <p style="font-family:var(--serif);font-weight:300;font-size:28px;color:#0B0B0C;letter-spacing:0.04em">Estrategia que transforma.</p>
+      <p style="font-family:var(--sans);font-size:7px;letter-spacing:0.15em;color:#7A796F">SUBTÍTULO</p>
+      <p style="font-family:var(--serif);font-weight:400;font-size:16px;color:#3A3835;letter-spacing:0.06em">Identidad visual de alto nivel para marcas ambiciosas.</p>
+      <p style="font-family:var(--sans);font-size:7px;letter-spacing:0.15em;color:#7A796F">CITA / CALLOUT</p>
+      <p style="font-family:var(--serif);font-weight:300;font-style:italic;font-size:14px;color:#7A796F;letter-spacing:0.04em">"La claridad es la forma más alta de sofisticación."</p>
+      <p style="font-family:var(--sans);font-size:7px;letter-spacing:0.15em;color:#7A796F">WORDMARK</p>
+      <p style="font-family:var(--serif);font-weight:400;font-size:18px;color:#4A4F3A;letter-spacing:0.52em;padding-left:0.52em">HAKIO</p>
+    </div>
+  </div>
+  <p class="pg-num" style="color:#C8C4BC">09</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ PAGE 10: TIPOGRAFÍA SECUNDARIA -->
+<div class="page light" style="padding:16mm 14mm 12mm">
+  <div>
+    <p class="micro" style="color:#7A796F;margin-bottom:3mm">06 — TIPOGRAFÍA SECUNDARIA</p>
+    <div style="height:0.5px;background:#C8C4BC;margin-bottom:8mm"></div>
+  </div>
+  <div style="flex:1">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8mm">
+      <div>
+        <p style="font-family:var(--sans);font-size:42px;font-weight:300;letter-spacing:-0.01em;color:#0B0B0C;line-height:1">Inter</p>
+        <p style="font-family:var(--sans);font-size:14px;font-weight:300;color:#7A796F;margin-top:2mm;letter-spacing:0.04em">Cuerpo — UI — Labels — Datos</p>
+      </div>
+      <div style="text-align:right">
+        <p style="font-family:var(--sans);font-size:9.5px;letter-spacing:0.2em;color:#7A796F">GOOGLE FONTS</p>
+        <p style="font-family:var(--sans);font-size:9.5px;color:#9A9895;margin-top:1mm">fonts.google.com</p>
+        <p style="font-family:var(--sans);font-size:9.5px;color:#4A4F3A;letter-spacing:0.1em;margin-top:2mm">Light 300 · Regular 400 · Medium 500</p>
+      </div>
+    </div>
+    <div style="background:#0B0B0C;padding:5mm 8mm;margin-bottom:6mm">
+      <p style="font-family:var(--sans);font-weight:300;font-size:13px;letter-spacing:0.04em;color:#F1EFE9;line-height:1.6">
+        A B C D E F G H I J K L M N Ñ O P Q R S T U V W X Y Z<br>
+        a b c d e f g h i j k l m n ñ o p q r s t u v w x y z<br>
+        <span style="color:#5A5855">0 1 2 3 4 5 6 7 8 9 — . , : ; ! ? @ # % &amp;</span>
+      </p>
+    </div>
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:4mm 8mm;align-items:baseline">
+      <p style="font-family:var(--sans);font-size:7px;letter-spacing:0.15em;color:#7A796F">LABEL / MICRO</p>
+      <p style="font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:0.25em;color:#4A4F3A;text-transform:uppercase">MARKETING STUDIO — LIMA, PERÚ</p>
+      <p style="font-family:var(--sans);font-size:7px;letter-spacing:0.15em;color:#7A796F">CUERPO</p>
+      <p style="font-family:var(--sans);font-weight:300;font-size:11px;line-height:1.7;color:#3A3835">Hakio transforma marcas ordinarias en presencias inevitables. Trabajamos con marcas que no quieren más ruido — quieren más impacto.</p>
+      <p style="font-family:var(--sans);font-size:7px;letter-spacing:0.15em;color:#7A796F">UI / INTERFAZ</p>
+      <p style="font-family:var(--sans);font-weight:400;font-size:10px;letter-spacing:0.06em;color:#0B0B0C">Contacto — Servicios — Portafolio — Blog — Equipo</p>
+      <p style="font-family:var(--sans);font-size:7px;letter-spacing:0.15em;color:#7A796F">DATOS / STATS</p>
+      <p style="font-family:var(--sans);font-weight:500;font-size:10px;letter-spacing:0.08em;color:#0B0B0C">+60 proyectos · 3 socios · Lima → Internacional</p>
+    </div>
+    <div style="margin-top:6mm;padding:4mm 6mm;border-left:2px solid #4A4F3A">
+      <p style="font-family:var(--sans);font-size:9.5px;line-height:1.6;color:#7A796F">
+        <strong style="color:#0B0B0C;font-weight:500">Regla de combinación:</strong> Cormorant Garamond para titulares, nombres de sección y el wordmark. Inter para todo texto de cuerpo, etiquetas, datos, interfaz digital y soporte impreso.
+      </p>
+    </div>
+  </div>
+  <p class="pg-num" style="color:#C8C4BC">10</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ PAGE 11: USOS CORRECTOS -->
+<div class="page dark" style="padding:16mm 14mm 12mm">
+  <p class="micro light-txt" style="margin-bottom:3mm">07 — USO DEL LOGO</p>
+  <div style="height:0.5px;background:#1E1C1A;margin-bottom:8mm"></div>
+  <p style="font-family:var(--serif);font-weight:300;font-size:20px;color:#F1EFE9;margin-bottom:8mm;letter-spacing:0.04em">Usos correctos</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4mm">
+    <!-- Correct 1: black bg -->
+    <div style="position:relative">
+      <div style="background:#0B0B0C;padding:8mm;display:flex;align-items:center;gap:3mm;border:0.5px solid #1A1A1C">
+        <svg width="32" height="32" viewBox="0 0 60 60" fill="none">
+          <rect width="60" height="60" fill="#4A4F3A"/>
+          <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+        </svg>
+        <span style="font-family:var(--serif);font-weight:400;font-size:16px;letter-spacing:0.48em;color:#F1EFE9;padding-left:0.48em">HAKIO</span>
+      </div>
+      <p style="font-family:var(--sans);font-size:7px;color:#4A4F3A;letter-spacing:0.1em;margin-top:2mm">✓ Fondo Jet Black</p>
+    </div>
+    <!-- Correct 2: ivory bg -->
+    <div>
+      <div style="background:#F1EFE9;padding:8mm;display:flex;align-items:center;gap:3mm">
+        <svg width="32" height="32" viewBox="0 0 60 60" fill="none">
+          <rect width="60" height="60" fill="#4A4F3A"/>
+          <line x1="17" y1="12" x2="17" y2="48" stroke="#F1EFE9" stroke-width="4" stroke-linecap="square"/>
+          <line x1="43" y1="12" x2="43" y2="48" stroke="#F1EFE9" stroke-width="4" stroke-linecap="square"/>
+          <line x1="17" y1="32" x2="43" y2="20" stroke="#F1EFE9" stroke-width="3.4" stroke-linecap="butt"/>
+        </svg>
+        <span style="font-family:var(--serif);font-weight:400;font-size:16px;letter-spacing:0.48em;color:#1A1A1C;padding-left:0.48em">HAKIO</span>
+      </div>
+      <p style="font-family:var(--sans);font-size:7px;color:#4A4F3A;letter-spacing:0.1em;margin-top:2mm">✓ Fondo Ivory</p>
+    </div>
+    <!-- Correct 3: graphite bg -->
+    <div>
+      <div style="background:#1A1A1C;padding:8mm;display:flex;align-items:center;gap:3mm">
+        <svg width="32" height="32" viewBox="0 0 60 60" fill="none">
+          <rect width="60" height="60" fill="#4A4F3A"/>
+          <line x1="17" y1="12" x2="17" y2="48" stroke="#1A1A1C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="43" y1="12" x2="43" y2="48" stroke="#1A1A1C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="17" y1="32" x2="43" y2="20" stroke="#1A1A1C" stroke-width="3.4" stroke-linecap="butt"/>
+        </svg>
+        <span style="font-family:var(--serif);font-weight:400;font-size:16px;letter-spacing:0.48em;color:#F1EFE9;padding-left:0.48em">HAKIO</span>
+      </div>
+      <p style="font-family:var(--sans);font-size:7px;color:#4A4F3A;letter-spacing:0.1em;margin-top:2mm">✓ Fondo Graphite</p>
+    </div>
+    <!-- Correct 4: symbol alone -->
+    <div>
+      <div style="background:#0B0B0C;padding:8mm;display:flex;align-items:center;justify-content:center;border:0.5px solid #1A1A1C">
+        <svg width="44" height="44" viewBox="0 0 60 60" fill="none">
+          <rect width="60" height="60" fill="#4A4F3A"/>
+          <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+        </svg>
+      </div>
+      <p style="font-family:var(--sans);font-size:7px;color:#4A4F3A;letter-spacing:0.1em;margin-top:2mm">✓ Símbolo solo como ícono</p>
+    </div>
+    <!-- Correct 5: vertical -->
+    <div>
+      <div style="background:#0B0B0C;padding:8mm;display:flex;flex-direction:column;align-items:center;gap:4mm;border:0.5px solid #1A1A1C">
+        <svg width="40" height="40" viewBox="0 0 60 60" fill="none">
+          <rect width="60" height="60" fill="#4A4F3A"/>
+          <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+        </svg>
+        <span style="font-family:var(--serif);font-weight:400;font-size:10px;letter-spacing:0.48em;color:#F1EFE9;padding-left:0.48em">HAKIO</span>
+      </div>
+      <p style="font-family:var(--sans);font-size:7px;color:#4A4F3A;letter-spacing:0.1em;margin-top:2mm">✓ Versión vertical</p>
+    </div>
+    <!-- Correct 6: olive bg -->
+    <div>
+      <div style="background:#4A4F3A;padding:8mm;display:flex;align-items:center;gap:3mm">
+        <svg width="32" height="32" viewBox="0 0 60 60" fill="none">
+          <rect width="60" height="60" fill="#0B0B0C"/>
+          <line x1="17" y1="12" x2="17" y2="48" stroke="#4A4F3A" stroke-width="4" stroke-linecap="square"/>
+          <line x1="43" y1="12" x2="43" y2="48" stroke="#4A4F3A" stroke-width="4" stroke-linecap="square"/>
+          <line x1="17" y1="32" x2="43" y2="20" stroke="#4A4F3A" stroke-width="3.4" stroke-linecap="butt"/>
+        </svg>
+        <span style="font-family:var(--serif);font-weight:400;font-size:16px;letter-spacing:0.48em;color:#F1EFE9;padding-left:0.48em">HAKIO</span>
+      </div>
+      <p style="font-family:var(--sans);font-size:7px;color:#4A4F3A;letter-spacing:0.1em;margin-top:2mm">✓ Fondo Deep Olive (inverso)</p>
+    </div>
+  </div>
+  <p class="pg-num">11</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ PAGE 12: USOS INCORRECTOS -->
+<div class="page dark" style="padding:16mm 14mm 12mm">
+  <p class="micro light-txt" style="margin-bottom:3mm">07 — USO DEL LOGO</p>
+  <div style="height:0.5px;background:#1E1C1A;margin-bottom:8mm"></div>
+  <p style="font-family:var(--serif);font-weight:300;font-size:20px;color:#F1EFE9;margin-bottom:8mm;letter-spacing:0.04em">Usos incorrectos</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4mm">
+    <!-- Wrong 1: stretched -->
+    <div>
+      <div style="background:#0B0B0C;padding:8mm;display:flex;align-items:center;gap:3mm;border:1px solid #3A1414;position:relative;overflow:hidden">
+        <svg width="48" height="28" viewBox="0 0 60 60" fill="none" style="transform:scaleX(1.5)">
+          <rect width="60" height="60" fill="#4A4F3A"/>
+          <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+        </svg>
+        <span style="font-family:var(--serif);font-weight:400;font-size:16px;letter-spacing:0.48em;color:#F1EFE9;transform:scaleX(1.3)">HAKIO</span>
+      </div>
+      <p style="font-family:var(--sans);font-size:7px;color:#8B3A3A;letter-spacing:0.1em;margin-top:2mm">✗ No estirar ni deformar</p>
+    </div>
+    <!-- Wrong 2: rotated -->
+    <div>
+      <div style="background:#0B0B0C;padding:8mm;display:flex;align-items:center;justify-content:center;border:1px solid #3A1414;height:56px">
+        <div style="transform:rotate(25deg);display:flex;align-items:center;gap:3mm">
+          <svg width="28" height="28" viewBox="0 0 60 60" fill="none">
+            <rect width="60" height="60" fill="#4A4F3A"/>
+            <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+            <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+            <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+          </svg>
+          <span style="font-family:var(--serif);font-weight:400;font-size:13px;letter-spacing:0.4em;color:#F1EFE9">HAKIO</span>
+        </div>
+      </div>
+      <p style="font-family:var(--sans);font-size:7px;color:#8B3A3A;letter-spacing:0.1em;margin-top:2mm">✗ No rotar el logo</p>
+    </div>
+    <!-- Wrong 3: wrong color -->
+    <div>
+      <div style="background:#0B0B0C;padding:8mm;display:flex;align-items:center;gap:3mm;border:1px solid #3A1414">
+        <svg width="32" height="32" viewBox="0 0 60 60" fill="none">
+          <rect width="60" height="60" fill="#1E4D8C"/>
+          <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+        </svg>
+        <span style="font-family:var(--serif);font-weight:400;font-size:16px;letter-spacing:0.48em;color:#1E4D8C;padding-left:0.48em">HAKIO</span>
+      </div>
+      <p style="font-family:var(--sans);font-size:7px;color:#8B3A3A;letter-spacing:0.1em;margin-top:2mm">✗ No alterar los colores</p>
+    </div>
+    <!-- Wrong 4: drop shadow -->
+    <div>
+      <div style="background:#0B0B0C;padding:8mm;display:flex;align-items:center;gap:3mm;border:1px solid #3A1414">
+        <div style="filter:drop-shadow(3px 3px 4px rgba(74,79,58,0.8))">
+          <svg width="32" height="32" viewBox="0 0 60 60" fill="none">
+            <rect width="60" height="60" fill="#4A4F3A"/>
+            <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+            <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+            <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+          </svg>
+        </div>
+        <span style="font-family:var(--serif);font-weight:400;font-size:16px;letter-spacing:0.48em;color:#F1EFE9;padding-left:0.48em;text-shadow:3px 3px 4px rgba(74,79,58,0.8)">HAKIO</span>
+      </div>
+      <p style="font-family:var(--sans);font-size:7px;color:#8B3A3A;letter-spacing:0.1em;margin-top:2mm">✗ No agregar sombras ni efectos</p>
+    </div>
+    <!-- Wrong 5: low contrast -->
+    <div>
+      <div style="background:#3A3F2C;padding:8mm;display:flex;align-items:center;gap:3mm;border:1px solid #3A1414">
+        <svg width="32" height="32" viewBox="0 0 60 60" fill="none">
+          <rect width="60" height="60" fill="#4A4F3A"/>
+          <line x1="17" y1="12" x2="17" y2="48" stroke="#3A3F2C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="43" y1="12" x2="43" y2="48" stroke="#3A3F2C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="17" y1="32" x2="43" y2="20" stroke="#3A3F2C" stroke-width="3.4" stroke-linecap="butt"/>
+        </svg>
+        <span style="font-family:var(--serif);font-weight:400;font-size:16px;letter-spacing:0.48em;color:#3A3F2C;padding-left:0.48em">HAKIO</span>
+      </div>
+      <p style="font-family:var(--sans);font-size:7px;color:#8B3A3A;letter-spacing:0.1em;margin-top:2mm">✗ No usar sobre fondos similares al olive</p>
+    </div>
+    <!-- Wrong 6: outline/stroke -->
+    <div>
+      <div style="background:#0B0B0C;padding:8mm;display:flex;align-items:center;gap:3mm;border:1px solid #3A1414">
+        <svg width="32" height="32" viewBox="0 0 60 60" fill="none">
+          <rect width="60" height="60" fill="none" stroke="#4A4F3A" stroke-width="2"/>
+          <line x1="17" y1="12" x2="17" y2="48" stroke="#4A4F3A" stroke-width="4" stroke-linecap="square"/>
+          <line x1="43" y1="12" x2="43" y2="48" stroke="#4A4F3A" stroke-width="4" stroke-linecap="square"/>
+          <line x1="17" y1="32" x2="43" y2="20" stroke="#4A4F3A" stroke-width="3.4" stroke-linecap="butt"/>
+        </svg>
+        <span style="font-family:var(--serif);font-weight:400;font-size:16px;letter-spacing:0.48em;color:#4A4F3A;-webkit-text-stroke:1px #4A4F3A;padding-left:0.48em">HAKIO</span>
+      </div>
+      <p style="font-family:var(--sans);font-size:7px;color:#8B3A3A;letter-spacing:0.1em;margin-top:2mm">✗ No usar solo en outline o wireframe</p>
+    </div>
+  </div>
+  <p class="pg-num">12</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ PAGE 13: APLICACIONES DIGITALES -->
+<div class="page dark" style="padding:16mm 14mm 12mm">
+  <p class="micro light-txt" style="margin-bottom:3mm">08 — APLICACIONES DIGITALES</p>
+  <div style="height:0.5px;background:#1E1C1A;margin-bottom:8mm"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:6mm;flex:1">
+    <!-- Instagram profile -->
+    <div>
+      <p style="font-family:var(--sans);font-size:9.5px;letter-spacing:0.15em;color:#4A4F3A;margin-bottom:3mm">PERFIL REDES SOCIALES</p>
+      <div style="display:flex;gap:4mm;align-items:center">
+        <div style="width:64px;height:64px;background:#4A4F3A;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <svg width="36" height="36" viewBox="0 0 60 60" fill="none">
+            <rect width="60" height="60" fill="#4A4F3A"/>
+            <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+            <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+            <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+          </svg>
+        </div>
+        <div>
+          <p style="font-family:var(--sans);font-size:11px;color:#F1EFE9;font-weight:500">@hakio.studios</p>
+          <p style="font-family:var(--sans);font-size:9.5px;color:#5A5855;margin-top:1mm">Marketing Studio · Lima</p>
+        </div>
+      </div>
+      <p style="font-family:var(--sans);font-size:7px;color:#3A3835;margin-top:3mm">Avatar: símbolo centrado sobre fondo negro o Jet Black. Nunca el logo horizontal.</p>
+    </div>
+    <!-- Email signature -->
+    <div>
+      <p style="font-family:var(--sans);font-size:9.5px;letter-spacing:0.15em;color:#4A4F3A;margin-bottom:3mm">FIRMA DE EMAIL</p>
+      <div style="background:#F1EFE9;padding:4mm;border-left:2px solid #4A4F3A">
+        <div style="display:flex;align-items:center;gap:3mm;margin-bottom:3mm">
+          <svg width="28" height="28" viewBox="0 0 60 60" fill="none">
+            <rect width="60" height="60" fill="#4A4F3A"/>
+            <line x1="17" y1="12" x2="17" y2="48" stroke="#F1EFE9" stroke-width="4" stroke-linecap="square"/>
+            <line x1="43" y1="12" x2="43" y2="48" stroke="#F1EFE9" stroke-width="4" stroke-linecap="square"/>
+            <line x1="17" y1="32" x2="43" y2="20" stroke="#F1EFE9" stroke-width="3.4" stroke-linecap="butt"/>
+          </svg>
+          <span style="font-family:var(--serif);font-weight:400;font-size:13px;letter-spacing:0.4em;color:#1A1A1C;padding-left:0.4em">HAKIO</span>
+        </div>
+        <p style="font-family:var(--sans);font-size:9.5px;color:#1A1A1C;font-weight:500">Rodrigo [Apellido]</p>
+        <p style="font-family:var(--sans);font-size:7px;color:#7A796F">Co-Fundador · Hakio Studios</p>
+        <p style="font-family:var(--sans);font-size:7px;color:#7A796F">contacto@hakio.co · Lima, Perú</p>
+      </div>
+    </div>
+    <!-- Post template concept -->
+    <div style="grid-column:1/-1">
+      <p style="font-family:var(--sans);font-size:9.5px;letter-spacing:0.15em;color:#4A4F3A;margin-bottom:3mm">POST INSTAGRAM — CONCEPTO</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2mm">
+        <div style="background:#0B0B0C;aspect-ratio:1;display:flex;align-items:center;justify-content:center">
+          <svg width="50" height="50" viewBox="0 0 60 60" fill="none">
+            <rect width="60" height="60" fill="#4A4F3A"/>
+            <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+            <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+            <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+          </svg>
+        </div>
+        <div style="background:#1A1A1C;aspect-ratio:1;display:flex;flex-direction:column;justify-content:flex-end;padding:4mm">
+          <p style="font-family:var(--serif);font-size:11px;font-weight:300;color:#F1EFE9;line-height:1.3">Tu marca, inevitable.</p>
+          <p style="font-family:var(--sans);font-size:7px;color:#4A4F3A;margin-top:2mm;letter-spacing:0.1em">HAKIO</p>
+        </div>
+        <div style="background:#F1EFE9;aspect-ratio:1;display:flex;align-items:center;justify-content:center">
+          <p style="font-family:var(--serif);font-size:14px;font-weight:300;font-style:italic;color:#4A4F3A;text-align:center;padding:4mm">"Claridad<br>sobre caos."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="pg-num">13</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ PAGE 14: APLICACIONES FÍSICAS -->
+<div class="page dark" style="padding:16mm 14mm 12mm;justify-content:space-between">
+  <div>
+    <p class="micro light-txt" style="margin-bottom:3mm">08 — APLICACIONES FÍSICAS</p>
+    <div style="height:0.5px;background:#1E1C1A;margin-bottom:6mm"></div>
+
+    <!-- TARJETA -->
+    <p style="font-family:var(--sans);font-size:9.5px;letter-spacing:0.18em;color:#4A4F3A;margin-bottom:3mm">TARJETA DE PRESENTACIÓN</p>
+    <div style="display:flex;gap:4mm;margin-bottom:7mm">
+      <div style="flex:1;height:58mm;background:#0B0B0C;display:flex;align-items:center;justify-content:center;border:0.5px solid #1A1A1C">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:2mm">
+          <svg width="50" height="50" viewBox="0 0 60 60" fill="none">
+            <rect width="60" height="60" fill="#4A4F3A"/>
+            <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+            <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+            <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+          </svg>
+          <p style="font-family:var(--sans);font-size:7px;letter-spacing:0.15em;color:#3A3835">ANVERSO</p>
+        </div>
+      </div>
+      <div style="flex:1;height:58mm;background:#F1EFE9;display:flex;flex-direction:column;justify-content:space-between;padding:5mm 6mm;border:0.5px solid #E0DDD7">
+        <div style="display:flex;align-items:center;gap:3mm">
+          <svg width="20" height="20" viewBox="0 0 60 60" fill="none">
+            <rect width="60" height="60" fill="#4A4F3A"/>
+            <line x1="17" y1="12" x2="17" y2="48" stroke="#F1EFE9" stroke-width="4" stroke-linecap="square"/>
+            <line x1="43" y1="12" x2="43" y2="48" stroke="#F1EFE9" stroke-width="4" stroke-linecap="square"/>
+            <line x1="17" y1="32" x2="43" y2="20" stroke="#F1EFE9" stroke-width="3.4" stroke-linecap="butt"/>
+          </svg>
+          <span style="font-family:var(--serif);font-weight:400;font-size:10px;letter-spacing:0.45em;color:#1A1A1C;padding-left:0.45em">HAKIO</span>
+        </div>
+        <div>
+          <p style="font-family:var(--sans);font-size:9px;font-weight:500;color:#1A1A1C">Rodrigo [Apellido]</p>
+          <p style="font-family:var(--sans);font-size:8px;color:#7A796F;margin-top:1mm">Co-Fundador · Hakio Studios</p>
+          <p style="font-family:var(--sans);font-size:8px;color:#9A9895;margin-top:1mm">contacto@hakio.co</p>
+        </div>
+        <p style="font-family:var(--sans);font-size:7px;letter-spacing:0.12em;color:#C8C4BC;align-self:flex-end">REVERSO</p>
+      </div>
+    </div>
+
+    <!-- MEMBRETE -->
+    <p style="font-family:var(--sans);font-size:9.5px;letter-spacing:0.18em;color:#4A4F3A;margin-bottom:3mm">MEMBRETE</p>
+    <div style="background:#F1EFE9;padding:6mm 8mm 5mm;border:0.5px solid #E0DDD7">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4mm">
+        <div style="display:flex;align-items:center;gap:4mm">
+          <svg width="26" height="26" viewBox="0 0 60 60" fill="none">
+            <rect width="60" height="60" fill="#4A4F3A"/>
+            <line x1="17" y1="12" x2="17" y2="48" stroke="#F1EFE9" stroke-width="4" stroke-linecap="square"/>
+            <line x1="43" y1="12" x2="43" y2="48" stroke="#F1EFE9" stroke-width="4" stroke-linecap="square"/>
+            <line x1="17" y1="32" x2="43" y2="20" stroke="#F1EFE9" stroke-width="3.4" stroke-linecap="butt"/>
+          </svg>
+          <span style="font-family:var(--serif);font-weight:400;font-size:13px;letter-spacing:0.45em;color:#1A1A1C;padding-left:0.45em">HAKIO</span>
+        </div>
+        <div style="text-align:right">
+          <p style="font-family:var(--sans);font-size:9px;color:#9A9895">Lima, Perú</p>
+          <p style="font-family:var(--sans);font-size:9px;color:#9A9895">contacto@hakio.co</p>
+        </div>
+      </div>
+      <div style="height:0.5px;background:#C8C4BC;margin-bottom:4mm"></div>
+      <div style="display:flex;flex-direction:column;gap:2mm">
+        <div style="height:7px;background:#EAE6DE;border-radius:1px;width:92%"></div>
+        <div style="height:7px;background:#EAE6DE;border-radius:1px;width:78%"></div>
+        <div style="height:7px;background:#EAE6DE;border-radius:1px;width:86%"></div>
+        <div style="height:7px;background:#EAE6DE;border-radius:1px;width:60%"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:4mm 6mm;background:#111110;margin-top:5mm">
+    <p style="font-family:var(--sans);font-size:9.5px;line-height:1.6;color:#4A4744">
+      <span style="color:#4A4F3A;letter-spacing:0.1em">MATERIALES —</span> Tarjetas en cartulina 350g mínimo, acabado mate. Barniz UV puntual sobre símbolo permitido. Membrete en bond 90g, margen interior 20mm.
+    </p>
+  </div>
+  <p class="pg-num">14</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════ PAGE 15: CLOSING -->
+<div class="page dark" style="justify-content:space-between;padding:16mm 14mm 12mm">
+  <div style="display:flex;justify-content:space-between">
+    <p class="micro light-txt">HAKIO — BRANDBOOK V1.0</p>
+    <p class="micro light-txt">2026</p>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:center;gap:8mm">
+    <svg width="100" height="100" viewBox="0 0 60 60" fill="none">
+      <rect width="60" height="60" fill="#4A4F3A"/>
+      <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4.0" stroke-linecap="square"/>
+      <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4.0" stroke-linecap="square"/>
+      <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+    </svg>
+    <p style="font-family:var(--serif);font-weight:300;font-size:28px;color:#F1EFE9;letter-spacing:0.08em">Este documento es propiedad de Hakio Studios.</p>
+    <p style="font-family:var(--sans);font-size:11px;color:#5A5855;letter-spacing:0.1em;text-align:center;max-width:100mm;line-height:1.7">Su reproducción o distribución parcial o total sin autorización escrita de Hakio Studios está prohibida. Para consultas sobre uso de marca, contactar a contacto@hakio.co</p>
+  </div>
+  <div style="height:0.5px;background:#1E1C1A;margin:4mm 0"></div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end">
+    <div>
+      <p style="font-family:var(--serif);font-weight:400;font-size:18px;letter-spacing:0.52em;color:#F1EFE9;padding-left:0.52em">HAKIO</p>
+      <p class="micro light-txt" style="margin-top:1mm">MARKETING STUDIO</p>
+    </div>
+    <p class="micro" style="color:#4A4F3A">negativa × diagonal</p>
+  </div>
+</div>
+
+</body>
+</html>

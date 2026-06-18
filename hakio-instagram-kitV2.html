@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Hakio — Instagram Kit</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --noir:#0B0B0C;--graph:#1A1A1C;--olive:#4A4F3A;
+  --stone:#7A796F;--mist:#C8C4BC;--cream:#EAE6DE;--ivory:#F1EFE9;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Inter",Arial,sans-serif;
+}
+body{background:#1A1816;font-family:var(--sans);color:var(--ivory);padding:32px 24px}
+.kit-header{max-width:1200px;margin:0 auto 40px;padding-bottom:20px;border-bottom:0.5px solid #2A2826}
+.kit-title{font-family:var(--serif);font-weight:300;font-size:36px;letter-spacing:0.08em;color:var(--ivory);margin-bottom:6px}
+.kit-sub{font-size:12px;letter-spacing:0.25em;color:var(--stone);text-transform:uppercase}
+.section{max-width:1200px;margin:0 auto 56px;break-inside:avoid;page-break-inside:avoid}
+.section-title{font-size:13px;letter-spacing:0.28em;color:var(--olive);text-transform:uppercase;margin-bottom:6px}
+.section-line{height:0.5px;background:#2A2826;margin-bottom:24px}
+.section-desc{font-size:13px;color:var(--stone);margin-bottom:24px;line-height:1.6;max-width:600px}
+.grid{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start;break-inside:avoid;page-break-inside:avoid}
+.template-wrap{display:flex;flex-direction:column;gap:8px;break-inside:avoid;page-break-inside:avoid}
+.dim-label{font-size:12px;letter-spacing:0.15em;color:#3A3835;text-transform:uppercase}
+.template-name{font-size:12px;color:var(--mist);letter-spacing:0.08em}
+.edit-note{font-size:12px;color:#3A3835;line-height:1.5;max-width:200px}
+
+/* ── SYMBOL HELPER ── */
+.sym{display:inline-flex}
+
+/* ── CANVA SPECS TABLE ── */
+.specs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:0}
+.spec-card{background:#111110;border:0.5px solid #1E1C1A;border-radius:8px;padding:16px}
+.spec-name{font-size:13px;letter-spacing:0.2em;color:var(--olive);text-transform:uppercase;margin-bottom:8px}
+.spec-row{display:flex;justify-content:space-between;padding:3px 0;border-bottom:0.5px solid #1A1816}
+.spec-row:last-child{border-bottom:none}
+.spec-key{font-size:13px;color:var(--stone)}
+.spec-val{font-size:13px;color:var(--ivory);font-weight:500}
+
+/* ── HIGHLIGHT CIRCLES ── */
+.hl-circle{width:90px;height:90px;border-radius:50%;overflow:hidden;position:relative;flex-shrink:0}
+.hl-label{font-size:12px;letter-spacing:0.12em;color:var(--stone);text-align:center;margin-top:6px;text-transform:uppercase}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="kit-header">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start">
+    <div>
+      <p class="kit-sub" style="margin-bottom:10px">Kit de identidad digital</p>
+      <h1 class="kit-title">Instagram Kit</h1>
+      <p style="font-family:var(--serif);font-size:16px;font-weight:300;color:var(--stone);margin-top:4px">HAKIO Marketing Studio</p>
+    </div>
+    <div style="text-align:right">
+      <div style="display:flex;align-items:center;gap:12px;justify-content:flex-end;margin-bottom:8px">
+        <svg width="32" height="32" viewBox="0 0 60 60" fill="none">
+          <rect width="60" height="60" fill="#4A4F3A"/>
+          <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+        </svg>
+        <span style="font-family:var(--serif);font-weight:400;font-size:25px;letter-spacing:0.48em;color:var(--ivory);padding-left:0.48em">HAKIO</span>
+      </div>
+      <p style="font-size:13px;letter-spacing:0.15em;color:var(--stone)">@hakio.studios</p>
+    </div>
+  </div>
+  <div style="margin-top:20px;padding:10px 14px;background:#111110;border-radius:6px;display:flex;gap:32px">
+    <div><p style="font-size:12px;letter-spacing:0.15em;color:var(--olive);margin-bottom:3px">FUENTES</p><p style="font-size:13px;color:var(--mist)">Cormorant Garamond 300/400 · Inter 300/400/500</p></div>
+    <div><p style="font-size:12px;letter-spacing:0.15em;color:var(--olive);margin-bottom:3px">PALETA</p><p style="font-size:13px;color:var(--mist)">#0B0B0C · #4A4F3A · #F1EFE9 · #7A796F</p></div>
+    <div><p style="font-size:12px;letter-spacing:0.15em;color:var(--olive);margin-bottom:3px">HANDLE</p><p style="font-size:13px;color:var(--mist)">@hakio.studios</p></div>
+  </div>
+</div>
+
+<!-- ═══ SECCIÓN 1: FOTO DE PERFIL ═══ -->
+<div class="section">
+  <p class="section-title">01 — Foto de perfil</p>
+  <div class="section-line"></div>
+  <p class="section-desc">El símbolo siempre aislado, centrado, sin wordmark. Nunca el logo horizontal completo. El bloque olive con la H tallada es suficientemente reconocible como avatar.</p>
+  <div class="grid">
+    <!-- Principal -->
+    <div class="template-wrap">
+      <p class="template-name">Principal</p>
+      <div style="width:240px;height:240px;background:#0B0B0C;display:flex;align-items:center;justify-content:center">
+        <svg width="120" height="120" viewBox="0 0 60 60" fill="none">
+          <rect width="60" height="60" fill="#4A4F3A"/>
+          <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+        </svg>
+      </div>
+      <p class="dim-label">1080 × 1080 px</p>
+      <p class="edit-note">Fondo Jet Black #0B0B0C · Símbolo Deep Olive</p>
+    </div>
+    <!-- Preview circular -->
+    <div class="template-wrap" style="margin-top:60px">
+      <p class="template-name">Vista previa en perfil</p>
+      <div style="width:120px;height:120px;border-radius:50%;background:#0B0B0C;display:flex;align-items:center;justify-content:center;overflow:hidden">
+        <svg width="64" height="64" viewBox="0 0 60 60" fill="none">
+          <rect width="60" height="60" fill="#4A4F3A"/>
+          <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+          <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+        </svg>
+      </div>
+      <p class="dim-label" style="margin-top:8px">Como se ve en IG</p>
+    </div>
+    <!-- Variante ivory -->
+    <div class="template-wrap">
+      <p class="template-name">Variante clara</p>
+      <div style="width:240px;height:240px;background:#F1EFE9;display:flex;align-items:center;justify-content:center">
+        <svg width="120" height="120" viewBox="0 0 60 60" fill="none">
+          <rect width="60" height="60" fill="#4A4F3A"/>
+          <line x1="17" y1="12" x2="17" y2="48" stroke="#F1EFE9" stroke-width="4" stroke-linecap="square"/>
+          <line x1="43" y1="12" x2="43" y2="48" stroke="#F1EFE9" stroke-width="4" stroke-linecap="square"/>
+          <line x1="17" y1="32" x2="43" y2="20" stroke="#F1EFE9" stroke-width="3.4" stroke-linecap="butt"/>
+        </svg>
+      </div>
+      <p class="dim-label">1080 × 1080 px</p>
+      <p class="edit-note">Uso alternativo sobre fondo ivory</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SECCIÓN 2: POSTS FEED ═══ -->
+<div class="section">
+  <p class="section-title">02 — Posts · Feed 1:1</p>
+  <div class="section-line"></div>
+  <p class="section-desc">Cuatro templates base para el feed. Edita el texto manteniendo siempre Cormorant Garamond para titulares e Inter para cuerpo y etiquetas.</p>
+  <div class="grid">
+
+    <!-- POST 1: CITA EDITORIAL -->
+    <div class="template-wrap">
+      <p class="template-name">T1 · Cita editorial</p>
+      <div style="width:440px;height:440px;background:#0B0B0C;display:flex;flex-direction:column;justify-content:space-between;padding:34px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <p style="font-family:var(--sans);font-size:13px;letter-spacing:0.25em;color:#4A4F3A;text-transform:uppercase">HAKIO Marketing Studio</p>
+          <svg width="20" height="20" viewBox="0 0 60 60" fill="none">
+            <rect width="60" height="60" fill="#4A4F3A"/>
+            <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+            <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+            <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+          </svg>
+        </div>
+        <div style="flex:1;display:flex;align-items:center;padding:16px 0">
+          <p style="font-family:var(--serif);font-weight:300;font-style:italic;font-size:27px;color:#F1EFE9;line-height:1.35;letter-spacing:0.02em">"La marca que no necesita gritar para ser escuchada."</p>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end">
+          <p style="font-family:var(--sans);font-size:13px;color:#3A3835;letter-spacing:0.1em">@hakio.studios</p>
+          <p style="font-family:var(--sans);font-size:13px;color:#3A3835;letter-spacing:0.1em">#BrandingLima</p>
+        </div>
+      </div>
+      <p class="dim-label">1080 × 1080 px</p>
+      <p class="edit-note">Editar la cita · Mantener tipografía Cormorant Italic</p>
+    </div>
+
+    <!-- POST 2: CASO / PROYECTO -->
+    <div class="template-wrap">
+      <p class="template-name">T2 · Caso de proyecto</p>
+      <div style="width:440px;height:440px;background:#1A1A1C;display:flex;flex-direction:column;justify-content:space-between;padding:34px">
+        <div>
+          <p style="font-family:var(--sans);font-size:13px;letter-spacing:0.25em;color:#4A4F3A;text-transform:uppercase;margin-bottom:4px">CASO · BRANDING</p>
+          <div style="height:0.5px;background:#2A2826;width:40px"></div>
+        </div>
+        <div>
+          <p style="font-family:var(--serif);font-weight:300;font-size:34px;color:#F1EFE9;line-height:1.15;letter-spacing:0.03em;margin-bottom:10px">Identidad visual para [Cliente]</p>
+          <p style="font-family:var(--sans);font-size:13px;color:#7A796F;line-height:1.6;letter-spacing:0.02em">Concepto · Branding · Aplicaciones digitales y físicas</p>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="display:flex;align-items:center;gap:6px">
+            <svg width="18" height="18" viewBox="0 0 60 60" fill="none">
+              <rect width="60" height="60" fill="#4A4F3A"/>
+              <line x1="17" y1="12" x2="17" y2="48" stroke="#1A1A1C" stroke-width="4" stroke-linecap="square"/>
+              <line x1="43" y1="12" x2="43" y2="48" stroke="#1A1A1C" stroke-width="4" stroke-linecap="square"/>
+              <line x1="17" y1="32" x2="43" y2="20" stroke="#1A1A1C" stroke-width="3.4" stroke-linecap="butt"/>
+            </svg>
+            <span style="font-family:var(--serif);font-size:12px;letter-spacing:0.38em;color:#F1EFE9;padding-left:0.38em">HAKIO</span>
+          </div>
+          <p style="font-family:var(--sans);font-size:13px;color:#3A3835;letter-spacing:0.1em">Lima, Perú</p>
+        </div>
+      </div>
+      <p class="dim-label">1080 × 1080 px</p>
+      <p class="edit-note">Cambiar categoría, nombre de cliente y descripción</p>
+    </div>
+
+
+
+    <!-- POST 3: TIP / CONTENIDO -->
+    <div class="template-wrap">
+      <p class="template-name">T3 · Tip / Contenido</p>
+      <div style="width:440px;height:440px;background:#0B0B0C;display:flex;flex-direction:column;padding:0;overflow:hidden">
+        <!-- Olive accent block top -->
+        <div style="background:#4A4F3A;height:8px;width:100%"></div>
+        <div style="flex:1;display:flex;flex-direction:column;justify-content:space-between;padding:24px 28px 28px">
+          <div>
+            <p style="font-family:var(--sans);font-size:13px;letter-spacing:0.25em;color:#4A4F3A;margin-bottom:12px">TIP · MARKETING</p>
+            <p style="font-family:var(--serif);font-weight:300;font-size:25px;color:#F1EFE9;line-height:1.3;margin-bottom:10px">Tu logo no es tu marca. Tu promesa lo es.</p>
+            <p style="font-family:var(--sans);font-size:13px;color:#7A796F;line-height:1.7">Un buen diseño atrae. Un posicionamiento claro retiene. La diferencia entre ambos es la estrategia que pocas marcas tienen.</p>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-end">
+            <div>
+              <p style="font-family:var(--sans);font-size:13px;color:#3A3835;letter-spacing:0.08em">Más en @hakio.studios</p>
+            </div>
+            <svg width="18" height="18" viewBox="0 0 60 60" fill="none">
+              <rect width="60" height="60" fill="#4A4F3A"/>
+              <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+              <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+              <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <p class="dim-label">1080 × 1080 px</p>
+      <p class="edit-note">Cambiar categoría, titular y cuerpo del tip</p>
+    </div>
+
+    <!-- POST 4: LIGHT EDITORIAL -->
+    <div class="template-wrap">
+      <p class="template-name">T4 · Editorial clara</p>
+      <div style="width:440px;height:440px;background:#F1EFE9;display:flex;flex-direction:column;justify-content:space-between;padding:34px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <p style="font-family:var(--sans);font-size:13px;letter-spacing:0.25em;color:#7A796F;text-transform:uppercase">HAKIO Marketing Studio</p>
+          <svg width="18" height="18" viewBox="0 0 60 60" fill="none">
+            <rect width="60" height="60" fill="#4A4F3A"/>
+            <line x1="17" y1="12" x2="17" y2="48" stroke="#F1EFE9" stroke-width="4" stroke-linecap="square"/>
+            <line x1="43" y1="12" x2="43" y2="48" stroke="#F1EFE9" stroke-width="4" stroke-linecap="square"/>
+            <line x1="17" y1="32" x2="43" y2="20" stroke="#F1EFE9" stroke-width="3.4" stroke-linecap="butt"/>
+          </svg>
+        </div>
+        <div style="flex:1;display:flex;align-items:center;padding:16px 0">
+          <div>
+            <p style="font-family:var(--sans);font-size:13px;letter-spacing:0.2em;color:#4A4F3A;margin-bottom:8px;text-transform:uppercase">Reflexión</p>
+            <p style="font-family:var(--serif);font-weight:300;font-size:32px;color:#0B0B0C;line-height:1.25;letter-spacing:0.02em">Simplicidad no es austeridad. Es claridad de intención.</p>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="height:0.5px;width:32px;background:#4A4F3A"></div>
+          <p style="font-family:var(--sans);font-size:13px;color:#C8C4BC;letter-spacing:0.1em">@hakio.studios</p>
+        </div>
+      </div>
+      <p class="dim-label">1080 × 1080 px</p>
+      <p class="edit-note">Para contenido reflexivo y de posicionamiento</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ SECCIÓN 3: STORIES ═══ -->
+<div class="section">
+  <p class="section-title">03 — Stories · 9:16</p>
+  <div class="section-line"></div>
+  <p class="section-desc">Formato vertical para stories e Instagram Stories. Mantener el logo siempre en la zona superior o inferior fuera del área de interacción (evitar el primer y último 15% de la pantalla).</p>
+  <div class="grid">
+
+    <!-- STORY 1: DARK BRANDED -->
+    <div class="template-wrap">
+      <p class="template-name">S1 · Dark branded</p>
+      <div style="width:202px;height:360px;background:#0B0B0C;display:flex;flex-direction:column;justify-content:space-between;padding:20px 16px">
+        <!-- Top: logo -->
+        <div style="display:flex;justify-content:center;padding-top:8px">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
+            <svg width="40" height="40" viewBox="0 0 60 60" fill="none">
+              <rect width="60" height="60" fill="#4A4F3A"/>
+              <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+              <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+              <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+            </svg>
+            <span style="font-family:var(--serif);font-weight:400;font-size:13px;letter-spacing:0.45em;color:#F1EFE9;padding-left:0.45em">HAKIO</span>
+          </div>
+        </div>
+        <!-- Middle: content area -->
+        <div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:16px 0">
+          <div style="height:0.5px;background:#1E1C1A;margin-bottom:16px"></div>
+          <p style="font-family:var(--serif);font-weight:300;font-style:italic;font-size:21px;color:#F1EFE9;line-height:1.4;text-align:center">[Tu titular aquí]</p>
+          <p style="font-family:var(--sans);font-size:12px;color:#5A5855;text-align:center;margin-top:10px;line-height:1.6">[Subtexto o descripción corta]</p>
+          <div style="height:0.5px;background:#1E1C1A;margin-top:16px"></div>
+        </div>
+        <!-- Bottom: CTA -->
+        <div style="text-align:center">
+          <p style="font-family:var(--sans);font-size:13px;letter-spacing:0.2em;color:#4A4F3A;margin-bottom:3px">VER MÁS</p>
+          <p style="font-family:var(--sans);font-size:13px;color:#3A3835">@hakio.studios</p>
+        </div>
+      </div>
+      <p class="dim-label">1080 × 1920 px</p>
+      <p class="edit-note">Editar titular, subtexto y CTA inferior</p>
+    </div>
+
+    <!-- STORY 2: ANUNCIO -->
+    <div class="template-wrap">
+      <p class="template-name">S2 · Anuncio / Novedad</p>
+      <div style="width:202px;height:360px;background:#1A1A1C;display:flex;flex-direction:column;justify-content:space-between;padding:20px 16px;overflow:hidden;position:relative">
+        <!-- Olive accent side -->
+        <div style="position:absolute;left:0;top:0;width:3px;height:100%;background:#4A4F3A"></div>
+        <div style="padding-left:8px">
+          <p style="font-family:var(--sans);font-size:6px;letter-spacing:0.25em;color:#4A4F3A;text-transform:uppercase;margin-bottom:6px">NUEVO · 2026</p>
+          <svg width="24" height="24" viewBox="0 0 60 60" fill="none">
+            <rect width="60" height="60" fill="#4A4F3A"/>
+            <line x1="17" y1="12" x2="17" y2="48" stroke="#1A1A1C" stroke-width="4" stroke-linecap="square"/>
+            <line x1="43" y1="12" x2="43" y2="48" stroke="#1A1A1C" stroke-width="4" stroke-linecap="square"/>
+            <line x1="17" y1="32" x2="43" y2="20" stroke="#1A1A1C" stroke-width="3.4" stroke-linecap="butt"/>
+          </svg>
+        </div>
+        <div style="padding-left:8px;flex:1;display:flex;flex-direction:column;justify-content:center;padding-top:20px;padding-bottom:20px">
+          <p style="font-family:var(--serif);font-weight:300;font-size:25px;color:#F1EFE9;line-height:1.25;margin-bottom:8px">[Titular del anuncio]</p>
+          <p style="font-family:var(--sans);font-size:12px;color:#7A796F;line-height:1.6">[Descripción breve de la novedad o proyecto]</p>
+        </div>
+        <div style="padding-left:8px">
+          <div style="background:#4A4F3A;padding:6px 10px;display:inline-block;margin-bottom:8px">
+            <p style="font-family:var(--sans);font-size:13px;letter-spacing:0.15em;color:#F1EFE9">VER MÁS →</p>
+          </div>
+          <p style="font-family:var(--sans);font-size:6px;color:#3A3835;letter-spacing:0.1em">@hakio.studios</p>
+        </div>
+      </div>
+      <p class="dim-label">1080 × 1920 px</p>
+      <p class="edit-note">Para lanzamientos, noticias y proyectos nuevos</p>
+    </div>
+
+    <!-- STORY 3: LIGHT STAT -->
+    <div class="template-wrap">
+      <p class="template-name">S3 · Stat / Dato</p>
+      <div style="width:202px;height:360px;background:#F1EFE9;display:flex;flex-direction:column;justify-content:space-between;padding:20px 16px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <svg width="24" height="24" viewBox="0 0 60 60" fill="none">
+            <rect width="60" height="60" fill="#4A4F3A"/>
+            <line x1="17" y1="12" x2="17" y2="48" stroke="#F1EFE9" stroke-width="4" stroke-linecap="square"/>
+            <line x1="43" y1="12" x2="43" y2="48" stroke="#F1EFE9" stroke-width="4" stroke-linecap="square"/>
+            <line x1="17" y1="32" x2="43" y2="20" stroke="#F1EFE9" stroke-width="3.4" stroke-linecap="butt"/>
+          </svg>
+          <p style="font-family:var(--sans);font-size:6px;letter-spacing:0.2em;color:#C8C4BC">HAKIO</p>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center">
+          <p style="font-family:var(--serif);font-weight:300;font-size:60px;color:#0B0B0C;line-height:1">72%</p>
+          <div style="height:0.5px;width:32px;background:#4A4F3A;margin:10px auto"></div>
+          <p style="font-family:var(--sans);font-size:12px;color:#7A796F;line-height:1.6;max-width:130px">de los consumidores prefieren marcas con identidad visual consistente</p>
+        </div>
+        <div style="text-align:center">
+          <p style="font-family:var(--sans);font-size:13px;letter-spacing:0.15em;color:#4A4F3A;margin-bottom:2px">¿Tu marca es consistente?</p>
+          <p style="font-family:var(--sans);font-size:6px;color:#C8C4BC">@hakio.studios</p>
+        </div>
+      </div>
+      <p class="dim-label">1080 × 1920 px</p>
+      <p class="edit-note">Datos, estadísticas y preguntas de engagement</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ SECCIÓN 4: HIGHLIGHTS ═══ -->
+<div class="section">
+  <p class="section-title">04 — Highlight covers</p>
+  <div class="section-line"></div>
+  <p class="section-desc">Portadas para las historias destacadas. Se muestran como círculos en el perfil. El símbolo puede variar — aquí se usa el bloque olive como base con iconografía mínima.</p>
+  <div class="grid" style="gap:20px">
+
+    <!-- Servicios: symbol fills 65% of circle, bold -->
+    <div class="template-wrap" style="align-items:center">
+      <div class="hl-circle">
+        <div style="width:100%;height:100%;background:#0B0B0C;display:flex;align-items:center;justify-content:center">
+          <svg width="62" height="62" viewBox="0 0 60 60" fill="none">
+            <rect width="60" height="60" fill="#4A4F3A"/>
+            <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="5.5" stroke-linecap="square"/>
+            <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="5.5" stroke-linecap="square"/>
+            <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="4.5" stroke-linecap="butt"/>
+          </svg>
+        </div>
+      </div>
+      <p class="hl-label">Servicios</p>
+    </div>
+
+    <!-- Proyectos: bold lines fill more space -->
+    <div class="template-wrap" style="align-items:center">
+      <div class="hl-circle">
+        <div style="width:100%;height:100%;background:#4A4F3A;display:flex;align-items:center;justify-content:center">
+          <svg width="66" height="66" viewBox="0 0 60 60" fill="none">
+            <line x1="12" y1="20" x2="48" y2="20" stroke="#F1EFE9" stroke-width="4.5" stroke-linecap="square"/>
+            <line x1="12" y1="30" x2="48" y2="30" stroke="#F1EFE9" stroke-width="4.5" stroke-linecap="square"/>
+            <line x1="12" y1="40" x2="36" y2="40" stroke="#F1EFE9" stroke-width="4.5" stroke-linecap="square"/>
+          </svg>
+        </div>
+      </div>
+      <p class="hl-label">Proyectos</p>
+    </div>
+
+    <!-- Equipo: filled shapes, no thin strokes -->
+    <div class="template-wrap" style="align-items:center">
+      <div class="hl-circle">
+        <div style="width:100%;height:100%;background:#1A1A1C;display:flex;align-items:center;justify-content:center">
+          <svg width="66" height="66" viewBox="0 0 60 60" fill="none">
+            <circle cx="30" cy="20" r="10" fill="#4A4F3A"/>
+            <path d="M10 50 Q10 34 30 34 Q50 34 50 50" fill="#4A4F3A"/>
+          </svg>
+        </div>
+      </div>
+      <p class="hl-label">Equipo</p>
+    </div>
+
+    <!-- Blog: bold serif letter, larger -->
+    <div class="template-wrap" style="align-items:center">
+      <div class="hl-circle">
+        <div style="width:100%;height:100%;background:#0B0B0C;display:flex;align-items:center;justify-content:center">
+          <p style="font-family:var(--serif);font-size:60px;font-style:italic;color:#4A4F3A;letter-spacing:0;line-height:1">B</p>
+        </div>
+      </div>
+      <p class="hl-label">Blog</p>
+    </div>
+
+    <!-- Clientes: filled bold calendar icon -->
+    <div class="template-wrap" style="align-items:center">
+      <div class="hl-circle">
+        <div style="width:100%;height:100%;background:#4A4F3A;display:flex;align-items:center;justify-content:center">
+          <svg width="62" height="62" viewBox="0 0 60 60" fill="none">
+            <rect x="10" y="16" width="40" height="32" rx="2" fill="#F1EFE9"/>
+            <rect x="10" y="16" width="40" height="11" fill="#0B0B0C"/>
+            <rect x="18" y="10" width="5" height="12" rx="2" fill="#F1EFE9"/>
+            <rect x="37" y="10" width="5" height="12" rx="2" fill="#F1EFE9"/>
+            <rect x="16" y="33" width="8" height="8" rx="1" fill="#4A4F3A"/>
+            <rect x="26" y="33" width="8" height="8" rx="1" fill="#4A4F3A"/>
+            <rect x="36" y="33" width="8" height="8" rx="1" fill="#4A4F3A"/>
+          </svg>
+        </div>
+      </div>
+      <p class="hl-label">Clientes</p>
+    </div>
+
+    <!-- Contacto: bold filled envelope -->
+    <div class="template-wrap" style="align-items:center">
+      <div class="hl-circle">
+        <div style="width:100%;height:100%;background:#0B0B0C;display:flex;align-items:center;justify-content:center">
+          <svg width="66" height="66" viewBox="0 0 60 60" fill="none">
+            <rect x="8" y="16" width="44" height="30" rx="3" fill="#4A4F3A"/>
+            <polygon points="8,16 30,34 52,16" fill="#0B0B0C"/>
+            <line x1="8" y1="46" x2="24" y2="30" stroke="#0B0B0C" stroke-width="3"/>
+            <line x1="52" y1="46" x2="36" y2="30" stroke="#0B0B0C" stroke-width="3"/>
+          </svg>
+        </div>
+      </div>
+      <p class="hl-label">Contacto</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ SECCIÓN 5: ESPECIFICACIONES CANVA ═══ -->
+<div class="section">
+  <p class="section-title">05 — Especificaciones para Canva</p>
+  <div class="section-line"></div>
+  <p class="section-desc">Setup para replicar cada template en Canva. Usa "Diseño personalizado" e ingresa las dimensiones exactas. Los colores se agregan como paleta personalizada.</p>
+  <div class="specs-grid">
+
+    <div class="spec-card">
+      <p class="spec-name">Foto de perfil</p>
+      <div class="spec-row"><span class="spec-key">Dimensiones</span><span class="spec-val">1080 × 1080 px</span></div>
+      <div class="spec-row"><span class="spec-key">Fondo</span><span class="spec-val">#0B0B0C</span></div>
+      <div class="spec-row"><span class="spec-key">Símbolo</span><span class="spec-val">Centrado, 60% del canvas</span></div>
+      <div class="spec-row"><span class="spec-key">Exportar</span><span class="spec-val">PNG transparente</span></div>
+    </div>
+
+    <div class="spec-card">
+      <p class="spec-name">Post feed</p>
+      <div class="spec-row"><span class="spec-key">Dimensiones</span><span class="spec-val">1080 × 1080 px</span></div>
+      <div class="spec-row"><span class="spec-key">Fuente titular</span><span class="spec-val">Cormorant Garamond 300</span></div>
+      <div class="spec-row"><span class="spec-key">Fuente cuerpo</span><span class="spec-val">Inter 300 / 400</span></div>
+      <div class="spec-row"><span class="spec-key">Margen interior</span><span class="spec-val">80px todos los lados</span></div>
+      <div class="spec-row"><span class="spec-key">Exportar</span><span class="spec-val">JPG 90% calidad</span></div>
+    </div>
+
+    <div class="spec-card">
+      <p class="spec-name">Stories</p>
+      <div class="spec-row"><span class="spec-key">Dimensiones</span><span class="spec-val">1080 × 1920 px</span></div>
+      <div class="spec-row"><span class="spec-key">Zona segura</span><span class="spec-val">Top/bot 250px libre</span></div>
+      <div class="spec-row"><span class="spec-key">Logo posición</span><span class="spec-val">Top: 120px desde arriba</span></div>
+      <div class="spec-row"><span class="spec-key">Exportar</span><span class="spec-val">JPG o PNG 90%</span></div>
+    </div>
+
+    <div class="spec-card">
+      <p class="spec-name">Highlight covers</p>
+      <div class="spec-row"><span class="spec-key">Dimensiones</span><span class="spec-val">1080 × 1080 px</span></div>
+      <div class="spec-row"><span class="spec-key">Ícono área segura</span><span class="spec-val">Centro, 40% del canvas</span></div>
+      <div class="spec-row"><span class="spec-key">Radio de clip</span><span class="spec-val">IG aplica círculo auto</span></div>
+      <div class="spec-row"><span class="spec-key">Exportar</span><span class="spec-val">PNG</span></div>
+    </div>
+
+    <div class="spec-card" style="grid-column:span 2">
+      <p class="spec-name">Paleta Canva — agregar como colores de marca</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+        <div style="display:flex;align-items:center;gap:6px"><div style="width:20px;height:20px;background:#0B0B0C;border-radius:3px;border:0.5px solid #333"></div><span class="spec-key">JET BLACK · #0B0B0C</span></div>
+        <div style="display:flex;align-items:center;gap:6px"><div style="width:20px;height:20px;background:#1A1A1C;border-radius:3px;border:0.5px solid #333"></div><span class="spec-key">GRAPHITE · #1A1A1C</span></div>
+        <div style="display:flex;align-items:center;gap:6px"><div style="width:20px;height:20px;background:#4A4F3A;border-radius:3px"></div><span class="spec-key">DEEP OLIVE · #4A4F3A</span></div>
+        <div style="display:flex;align-items:center;gap:6px"><div style="width:20px;height:20px;background:#7A796F;border-radius:3px"></div><span class="spec-key">WARM STONE · #7A796F</span></div>
+        <div style="display:flex;align-items:center;gap:6px"><div style="width:20px;height:20px;background:#C8C4BC;border-radius:3px"></div><span class="spec-key">MIST · #C8C4BC</span></div>
+        <div style="display:flex;align-items:center;gap:6px"><div style="width:20px;height:20px;background:#F1EFE9;border-radius:3px;border:0.5px solid #ddd"></div><span class="spec-key">IVORY · #F1EFE9</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div style="max-width:1200px;margin:0 auto;padding-top:20px;border-top:0.5px solid #1E1C1A;display:flex;justify-content:space-between;align-items:center">
+  <div style="display:flex;align-items:center;gap:10px">
+    <svg width="20" height="20" viewBox="0 0 60 60" fill="none">
+      <rect width="60" height="60" fill="#4A4F3A"/>
+      <line x1="17" y1="12" x2="17" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+      <line x1="43" y1="12" x2="43" y2="48" stroke="#0B0B0C" stroke-width="4" stroke-linecap="square"/>
+      <line x1="17" y1="32" x2="43" y2="20" stroke="#0B0B0C" stroke-width="3.4" stroke-linecap="butt"/>
+    </svg>
+    <span style="font-family:var(--serif);font-size:13px;letter-spacing:0.45em;color:var(--ivory);padding-left:0.45em">HAKIO</span>
+    <span style="font-family:var(--sans);font-size:13px;color:var(--stone);margin-left:4px">Marketing Studio · Instagram Kit v1.0</span>
+  </div>
+  <p style="font-family:var(--sans);font-size:12px;letter-spacing:0.12em;color:#3A3835">negativa × diagonal</p>
+</div>
+
+</body>
+</html>
